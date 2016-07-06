@@ -1,4 +1,5 @@
-import { DEFAULT_WORLD } from 'configs';
+import { DEFAULT_WORLD } from 'configs/world';
+console.log(DEFAULT_WORLD)
 /*
 Game of Life(http://www.bitstorm.org/gameoflife/)
 In this algorithm, there are two equivalent data form to hode the state of the "world":
@@ -168,7 +169,10 @@ export default Game = {
             heigth: h
         }
     },
-    getNext(){
+    getNext(data){
+         if(data){
+             this.setData(data);
+         }
          _data = getNextWorldState();
          return _data;
     }

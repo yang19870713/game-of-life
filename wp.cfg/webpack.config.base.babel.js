@@ -44,7 +44,10 @@ export default {
         new webpack.ProvidePlugin({
             React   : "react",
             ReactDOM: "react-dom",
-            _       : "lodash"
+            _       : "lodash",
+            d3: "d3",
+            jQuery: "jquery",
+            $: "jquery"
         })
     ],
     /*********** utils ************/
